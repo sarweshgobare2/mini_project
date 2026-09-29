@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 70px;
+  background: #172554;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+}
+
+.navbar h2 {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #93c5fd;
+}
+
+/* Home */
+
+.home {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 30px;
+}
+
+.hero {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #172554;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn,
+.details-btn,
+.back-btn {
+  display: inline-block;
+
+  background: #2563eb;
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+}
+
+/* Pages */
+
+.page {
+  padding: 40px 8%;
+}
+
+.page h1 {
+  color: #172554;
+  margin-bottom: 25px;
+}
+
+/* Search */
+
+.search-box {
+  display: flex;
+  max-width: 700px;
+  margin-bottom: 35px;
+}
+
+.search-box input {
+  flex: 1;
+
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 15px 25px;
+
+  border: none;
+
+  background: #2563eb;
+  color: white;
+
+  border-radius: 0 8px 8px 0;
+
+  cursor: pointer;
+}
+
+/* Books */
+
+.book-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 25px;
+}
+
+.book-card {
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 280px;
+
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 18px;
+}
+
+.book-info h3 {
+  margin-bottom: 10px;
+}
+
+.book-info p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.details-btn {
+  margin-top: 10px;
+}
+
+/* Details */
+
+.details-page {
+  padding: 40px 8%;
+}
+
+.details-card {
+  margin-top: 30px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.details-card h1 {
+  color: #172554;
+  margin-bottom: 20px;
+}
+
+.details-card p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subjects span {
+  background: #dbeafe;
+  color: #1d4ed8;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+}
+
+/* Messages */
+
+.message {
+  text-align: center;
+  margin: 50px;
+}
+
+.error {
+  color: red;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .page {
+    padding: 30px 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .search-box button {
+    border-radius: 8px;
+  }
+
+}
+/* Search History */
+
+.history-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.history-header h2 {
+  color: #172554;
+  font-size: 20px;
+}
+
+.clear-history {
+  border: none;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  padding: 8px 14px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.clear-history:hover {
+  background: #fecaca;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-item {
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+  color: #1d4ed8;
+
+  padding: 9px 15px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.history-item:hover {
+  background: #dbeafe;
+}
+
+.results-title {
+  color: #172554;
+  margin-bottom: 20px;
+}
